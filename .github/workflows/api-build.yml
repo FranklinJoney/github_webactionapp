@@ -9,4 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        run: echo "Building API"
+        run:  dotnet build
+      - name: Test
+        run:  dotnet test
