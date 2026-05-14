@@ -9,6 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        run:  dotnet build
+        run: |
+          dotnet --list-runtimes
+          dotnet --list-sdks
+          dotnet build
       - name: Test
         run:  dotnet test
